@@ -13,20 +13,25 @@ typedef struct{
     Pessoa* pPessoa;
 }Nodo;
 
+Nodo* pInicio;
+Nodo* pFim;
+Nodo* pAux;
+
 int main(void)
 {
     Pessoa *pPessoa = (Pessoa*) malloc(sizeof(Pessoa));
-
-    pPessoa->idade = 12;
-    pPessoa->altura = 178.56;
-
     Nodo* pNodo = (Nodo*) malloc(sizeof(Nodo));
+    pInicio = pNodo;
+    pFim = pNodo;
 
+    Pessoa *pPessoa = (Pessoa*) malloc(sizeof(Pessoa));
+    Nodo* pNodo = (Nodo*) malloc(sizeof(Nodo));
     pNodo->pPessoa = pPessoa;
 
-    pNodo->pPessoa->idade = 40;
+    pInicio->pProx = pNodo;
+    pInicio->pAnt = NULL;
+    pFim = pNodo;
 
-    printf("%d\n", pNodo->pPessoa->idade);
 
     return 0;
 }
