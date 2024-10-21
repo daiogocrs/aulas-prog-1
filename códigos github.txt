@@ -1,0 +1,8 @@
+git clone "link" -> clonar um repositório 
+git pull -> atualizar um repositório no pc
+
+-PARA ATUALIZAR UM REPOSITÓRIO NO GITHUB-
+
+1- git add . -> atualiza o repositório no pc
+2- git commit -m "versão" -> atualiza a versão a ser mandada para o github
+3- git push "link" -> atualiza o repositório no github
