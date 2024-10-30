@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int soma(int a);
+void soma(int *a); //parametro por referência
 
 int main()
 {
@@ -8,14 +8,14 @@ int main()
 
     printf("Conteúdo do valor: %i\n", valor);
 
-    valor = soma(valor);
+    soma(&valor);
 
     printf("Conteúdo do valor: %i\n", valor);
 
     return 0;
 }
 
-int soma(int a)
+void soma(int *a)
 {
-    return ++a;
+    *a += 1;
 }
